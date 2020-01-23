@@ -1,65 +1,66 @@
 // pages/home/home.js
+
+// getApp方法用于获取appjs中的app对象
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    name:app.globalData.name,
+    age: app.globalData.age
+  },
+  // 监听wxml中的点击事件
+  viewClick() {
+    console.log('click!!')
+  },
+  // 监听一些window事件
+  onPageScroll(obj) {
+    console.log(obj)
+  },
+  onPullDownRefresh() {
+    console.log('hahaha')
+  },
+  onReachBottom() {
+    console.log('bottom')
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
-  },
+  onLoad() {
+    console.log('loading')
+    wx.request({
+      url: 'https://api.asilu.com/geo/',
+      success(res) {
+        console.log(res)
+      }
+    })
+  }, 
 
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 生命周期函数--监听页面初次渲染完成(只触发一次，发生于onshow之后)
    */
   onReady: function () {
-
+    console.log('ready')
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
-
+    console.log('show')
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
   onHide: function () {
-
+    console.log('hide')
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
   onUnload: function () {
 
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
   onPullDownRefresh: function () {
 
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
   onReachBottom: function () {
 
   },
-
-  /**
-   * 用户点击右上角分享
-   */
   onShareAppMessage: function () {
 
   }

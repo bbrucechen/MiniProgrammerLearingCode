@@ -1,3 +1,13 @@
 <!--pages/home/home.wxml-->
 <text class="title">hello world</text>
 
+<!-- 获取用户信息的方式 -->
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">123</button>
+
+<!-- 获取用户信息的方式 -->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+
+<view bindtap="viewClick">{{name}}{{age}}</view>
+
+
