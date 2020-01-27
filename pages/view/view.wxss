@@ -1,0 +1,9 @@
+/* pages/view/view.wxss */
+.box {
+  background-color: red;
+}
+
+.active {
+  background-color: green;
+  color: red;
+}

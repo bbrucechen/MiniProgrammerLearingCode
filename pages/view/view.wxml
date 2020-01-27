@@ -1,0 +1,25 @@
+<!--pages/view/view.wxml-->
+
+<!-- view组件：相当于div 块级元素,独占一行 一般用作容器组件 -->
+<view>
+  <text>213</text>
+  <button>12</button>
+</view>
+<view class="box">hhh</view>
+
+<!-- 1.hover-class:指定点击态的样式 字符串（类名）-->
+<view hover-class="active">ixixixs</view>
+
+<!-- 2.hover-stop-propagation:指定是否阻止事件冒泡 布尔值-->
+<view hover-class="active">
+father
+<view hover-class="active" hover-stop-propagation="{{true}}">son</view>
+</view>
+
+<!-- 3.hover-start-time:指定点击后多久出现点击态 number 单位毫秒 -->
+<view hover-start-time="1000" hover-class="active">12</view>
+
+<!-- 4.hover-stay-time :指定点击态保持多久 number 单位毫秒-->
+<view hover-start-time="1000" hover-stay-time="3000" hover-class="active">12</view>
+
+

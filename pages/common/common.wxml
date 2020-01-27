@@ -1,0 +1,14 @@
+<!--pages/common/common.wxml-->
+<!-- 组件有一些常见的共同属性 -->
+<!-- 比如原生的id、class、style -->
+<view id="myview">123</view>
+<view style="color:blue;">234</view>
+
+<!-- hidden：指定组件是否显示 布尔值 true隐藏 false显示（默认）-->
+<text hidden="{{true}}">pages/common/common.wxml</text>
+<!-- 以下*代表任意命名部分或者多种 -->
+<!-- data-*:自定义属性 -->
+<text data-active="active"></text>
+
+<!-- bind*/catch*：绑定事件 -->
+

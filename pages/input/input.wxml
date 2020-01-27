@@ -1,0 +1,25 @@
+<!--pages/input/input.wxml-->
+<!-- 小程序的input必须先指定样式才会显示 -->
+<!-- 是原生组件 属性与原生差不多 有些许区别-->
+<input></input>
+
+<!-- type：决定键盘类型 text(默认) number idcard digit-->
+<input type="digit" placeholder="digit"></input>
+<input type="number" placeholder="number"></input>
+<input type="text" placeholder="text"></input>
+<input type="idcard" placeholder="idcard"></input>
+
+<!-- password:设置输入文本为暗文 -->
+<input password></input>
+
+<!-- confirm-type:指定键盘确认键样式(文字) -->
+<input confirm-type="search"></input>
+
+<!-- input绑定事件 -->
+<!-- bindfocus 绑定聚焦事件 绑定的有个默认参数对象 包含了绑定的input的参数 -->
+<input bindfocus="inputfocus"></input>
+<!-- bindblur 绑定失焦事件 -->
+
+
+
+

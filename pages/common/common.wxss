@@ -1,0 +1,4 @@
+/* pages/common/common.wxss */
+#myview {
+  color:red;
+}
