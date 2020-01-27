@@ -1,0 +1,4 @@
+/* pages/text/text.wxss */
+.nbsp {
+ font-size: 20px; 
+}

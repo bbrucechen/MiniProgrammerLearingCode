@@ -1,14 +1,11 @@
-// pages/home/home.js
+// pages/button/button.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-  },
-  onPullDownRefresh() {
-    console.log('pull')
+    isLoading:true
   },
 
   /**

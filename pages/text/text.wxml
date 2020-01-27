@@ -1,0 +1,23 @@
+<!--pages/text/text.wxml-->
+<!-- <text>this is text</text> -->
+<!-- text类似于span 行内元素 用于显示文本 -->
+<!-- 1.基本使用 -->
+<text>hello world\n</text>
+<text>hello miniprogram\n</text>
+
+<!-- 2.selectable属性：决定文本是否能被选中 -->
+<!-- 默认情况下text中的文本长按是不能选中的 可以通过修改属性selectable属性的值为true来实现选中-->
+<text selectable="{{true}}">hello codewhy\n</text>
+
+<!-- 3.space属性:决定文本中的空格大小 有三个属性值 nbsp：根据字体设置的空格大小(即根据当前组件的font-size属性大小决定） emsp:一个中文字符大小 ensp:半个中文字符大小-->
+<text>hello world\n</text>
+<text space="nbsp" class="nbsp">hello world\n</text>
+<text space="ensp">hello world\n</text>
+<text space="emsp">hello world\n</text>
+
+<!-- 4.decode属性：是否解码文本（即是否解码转义字符） -->
+<text>5 &gt; 3 \n</text>
+<text decode="{{true}}">5 &gt; 3</text> 
+
+
+

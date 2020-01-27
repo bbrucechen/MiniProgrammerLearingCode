@@ -1,4 +1,4 @@
-// pages/home/home.js
+// pages/text/text.js
 Page({
 
   /**
@@ -6,9 +6,6 @@ Page({
    */
   data: {
 
-  },
-  onPullDownRefresh() {
-    console.log('pull')
   },
 
   /**
