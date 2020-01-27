@@ -1,0 +1,7 @@
+<!--pages/wxml/wxml.wxml-->
+<view>{{message}}</view>
+<view>{{12 > 20}}</view>
+<view>{{nowDate}}</view>
+
+<button bindtap="changeColor">切换颜色</button>
+<view class="box" style="color:{{fontColor}};">哈哈哈</view>
