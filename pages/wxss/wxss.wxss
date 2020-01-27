@@ -1,0 +1,10 @@
+/* pages/wxss/wxss.wxss */
+/* <!-- 导入外部wxss文件 --> */
+@import './style/container.wxss'
+.box {
+  color: blue;
+}
+
+view {
+  font-style:italic;
+}
