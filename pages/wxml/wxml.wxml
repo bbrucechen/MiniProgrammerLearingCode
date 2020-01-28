@@ -5,3 +5,17 @@
 
 <button bindtap="changeColor">切换颜色</button>
 <view class="box" style="color:{{fontColor}};">哈哈哈</view>
+
+<view>-----------条件判断-------------</view>
+<!-- 条件判断wx：if wx：elif wx：else的用法 -->
+<button size="mini" bindtap="switch">切换显示</button>
+<view wx:if="{{isShow}}">123</view>
+<view wx:else>234</view>
+
+<input class="ipt" bindblur="inputDone" type="text"></input>
+<view wx:if="{{score > 60 && score < 80}}">及格</view>
+<view wx:elif="{{score >= 80 && score <=100}}">良好</view>
+<view wx:else>不及格</view>
+
+<!-- wx:if是直接不将元素生成到渲染树中来隐藏元素，而hidden是通过添加属性display：none来隐藏 -->
+<view hidden="{{true}}">123123</view>

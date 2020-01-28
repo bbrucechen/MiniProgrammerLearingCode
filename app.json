@@ -1,7 +1,11 @@
 {
   "pages": [
+    "pages/wxfor/wxfor",
+    "pages/wxml/wxml",
     "pages/home/home",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/header/header",
+    "pages/footer/footer"
   ],
   "sitemapLocation": "sitemap57.json"
 }

@@ -2,3 +2,9 @@
 .box {
   font-size: 64rpx;
 }
+
+.ipt {
+  width: 200px;
+  height: 50px;
+  border: 2px solid #eee;
+}

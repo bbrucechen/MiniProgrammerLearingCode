@@ -1,0 +1,6 @@
+<template name="contentShow">
+  <text>{{textCon}}</text>
+  <text>{{textCon2}}</text>
+ <button>按钮</button>
+ <view>哈哈</view>
+</template>

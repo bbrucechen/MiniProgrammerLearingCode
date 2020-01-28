@@ -1,0 +1,55 @@
+<!--pages/wxfor/wxfor.wxml-->
+<!-- <text>pages/wxfor/wxfor.wxml</text> -->
+<!-- <view>--------列表渲染-------------</view> -->
+<!-- 遍历数组、字符串、数字 -->
+<!-- 遍历数字 -->
+<!-- <view wx:for="{{count}}">{{count}}</view> -->
+<!-- 遍历数组时会自动生成变量item和index 分别用于表示数组的每一个值和对应的索引值 -->
+<!-- <view wx:for="{{['abc','nba','cba']}}">{{item + index}}</view> -->
+<!-- 遍历字符串 -->
+<!-- <view wx:for="coderwhy">{{item+index}}</view> -->
+
+<!-- block标签:用于将我们需要统一操作的组件包裹起来，而本身不会被渲染，从而可以通过操作block标签操作多个标签 -->
+<!-- <block wx:for="{{5}}">
+<text>123</text>
+<view>234</view>
+<button>1232131231</button>
+</block> -->
+
+<!-- item/index起别名 -->
+<!-- wx:for-item=新名字 -->
+<!-- wx:for-index=新名字 -->
+<!-- <view wx:for="{{movies}}" wx:for-item="movie" wx:for-index="number">{{number + ':' + movie}}</view> -->
+
+<!-- wx:key的作用与vue中的key属性相同 -->
+
+
+<!-- 代码复用：template 类似于组件 在没有组件前使用的比较多 -->
+<!-- 可以是单标签也可以是双标签 -->
+<!-- template在没有使用前 里面的内容是不会被渲染的 -->
+<!-- 1.定义模板(模板中无法使用js文件中data中的变量，只能在使用模板时通过data属性传值) -->
+<!-- <template name="contentShow">
+  <text>{{textCon}}</text>
+  <text>{{textCon2}}</text>
+ <button>按钮</button>
+ <view>哈哈</view>
+</template> -->
+
+<!-- 2.使用模板 属性is的值指定为想要展示的template的name-->
+<!-- 通过data属性传值 data="{{key1:value1,key2:value2}}" value可以是直接量也可以是js中data中的变量-->
+<!-- <template is="contentShow" data="{{textCon:count,textCon2:20}}"></template> -->
+
+<!-- <import src=""/>和<include src=""/> -->
+<!-- 也可以通过<import src="模板地址">导入外部的模板 -->
+<import src="/wxml/template.wxml"/>
+<template is="contentShow" data="{{textCon:count,textCon2:20}}"></template>
+<!-- 注意：模板不能递归导入 -->
+
+<!-- include可以将目标文件中除了template和wxs之外的标签全部拷贝 -->
+<include src="/pages/header/header.wxml"/>
+<include src="/pages/footer/footer.wxml"/>
+<!-- include可以递归导入 -->
+
+<!-- wxml有两种导入方式：
+1.import导入模板（不可递归导入）
+2.include导入wxml中除了template、wxs之外的的组件（可以递归导入) -->
