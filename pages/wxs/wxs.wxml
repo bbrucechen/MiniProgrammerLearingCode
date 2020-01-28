@@ -1,0 +1,33 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- <text>pages/wxs/wxs.wxml</text> -->
+<!-- wxml无法执行js中的函数 -->
+<!-- <text>{{26.toFixed(2)}}</text> -->
+<!-- page中定义的方法只能用于事件绑定 -->
+<!-- <text>{{getNum(20.28462)}}</text> -->
+
+
+<!-- 如果要使用函数处理wxml中的数据，就要使用wxs -->
+<!-- wxs的定义方式 -->
+<!-- 1.wxml内部定义 -->
+<!-- <wxs module="info">
+var foo = "hello world123123";
+function fixNumber(num) {
+  return num.toFixed(2)
+} -->
+<!-- 通过module.exports导出对象 对象里有要使用的变量 -->
+<!-- module.exports = {
+  foo:foo,
+  fix:fixNumber
+  }
+</wxs> -->
+<!-- <view>{{info.foo}}</view> -->
+<!-- <view>{{info.fix(20.2312231)}}</view> -->
+<!-- 注意：1.必须有module属性指定名字 2.wxs是使用commonJS模块机制的，所以要通过module.exports导出数据 3.在wxml中通过module名字即可使用wxs导出的数据 -->
+
+<!-- 2.wxml导入外部wxs文件 -->
+<!-- 不能绝对路径只能相对路径 -->
+<!-- <wxs src="../outwxs/wxs.wxs" module="info"></wxs>
+<view>{{info.foo}}</view> -->
+
+<!-- 利用wxs可以对数据进行格式转化 比如数字格式化或者时间格式化 -->
+

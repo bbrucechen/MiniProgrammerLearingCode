@@ -1,0 +1,9 @@
+
+var foo = "hello world123123";
+function fixNumber(num) {
+  return num.toFixed(2)
+}
+module.exports = {
+  foo: foo,
+  fix: fixNumber
+}
