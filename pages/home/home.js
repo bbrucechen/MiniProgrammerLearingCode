@@ -5,7 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    titles:['math','biology','art']
+  },
+  btnClick(e) {
+    console.log(e)
+  },
+  viewMove(e) {
+    console.log(e.touches[0].pageX)
+  },
+  btn2Click(e) {
+    console.log(e)
+  },
+  titleClick(index) {
+    console.log(index)
+  },
+  click1() {
+    console.log(1)
+  },
+  click2() {
+    console.log(2)
   },
 
   /**

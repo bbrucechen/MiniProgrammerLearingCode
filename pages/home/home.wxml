@@ -1,3 +1,40 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello world</text>
+<!-- 1.基本使用 -->
+<button bindtap="btnClick">按钮</button>
+<button bind:tap="btnClick">按钮</button>
+<button catchtap="btnClick">按钮</button>
+<button catch:tap="btnClick">按钮</button>
+<!-- 不同组件有自己专属的特殊事件 -->
+
+<!-- 2.常见共有事件 -->
+<!-- touchstart touchmove toucecancel touchend tap longpress longtap -->
+<view bindtouchstart="btnClick">123</view>
+<view bindtouchcancel="btnClick">123</view>
+<view bindtouchend="btnClick">end</view>
+<view class="bigbox" bindtouchmove="viewMove">123</view>
+<view bindlongtap="btnClick">1233</view>
+<view bindlongpress="btnClick">1233</view>
+
+<!-- 3.事件对象的解析 -->
+<button id="btn" bindtap="btn2Click">e</button>
+<!-- changedTouches主要用于记录多个手指触发时的按键 -->
+<!-- touches记录触发事件的手指 -->
+<!-- currentTarget记录绑定了事件的元素 -->
+<!-- target记录了触发事件的元素 -->
+
+<!-- 4.事件参数的传递：如果想传递参数 则必须通过 data-属性名 添加数值 然后再通过触发的事件的事件对象中的target属性中的setdata属性的同名属性获取 -->
+<view class="container">
+  <view wx:for="{{titles}}" bindtap="titleClick" data-indexbtn="{{index}}">{{item}}</view>
+</view>
+
+<!-- 5.事件冒泡和事件捕获 -->
+<!-- capture-bind：tap：捕获阶段 bind：tap：冒泡阶段 -->
+<!-- capture-catch：tap:捕获之后不再传递-->
+<view class="view1" bind:tap="click2">
+  <view class="view2" catch:tap="click1">1</view>
+</view>
+
+
+
+
 
