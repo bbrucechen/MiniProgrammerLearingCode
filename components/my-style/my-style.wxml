@@ -1,0 +1,4 @@
+<!--components/my-style/my-style.wxml-->
+<view class="title">style title</view>
+<!-- 组件中不可使用标签、属性、id选择器 -->
+<view class="content" id="box">style content</view>

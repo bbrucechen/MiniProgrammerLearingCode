@@ -1,3 +1,60 @@
 <!--pages/home/home.wxml-->
-<text class="title">hello world</text>
 
+
+<!-- 1.自定义组件的基本使用 -->
+<!-- 先创建定义组件 再在要使用该组件的页面的json文件中注册该组件的标签名 然后就可以使用了 -->
+<!-- <my-cpn></my-cpn>
+<my-cpn></my-cpn>
+<my-cpn></my-cpn> -->
+
+<!-- 自定义组件的起名只能是小写字母、中划线和下划线的组合 -->
+<!-- 组件也可以在app.json中注册，这样就可以全局使用而不需要在每一个使用该组件页面的json文件中一一注册 -->
+
+
+<!-- 2.自定义组件的样式细节 -->
+<!-- 组件页面之间的样式不会互相影响 -->
+<!-- <view class="title">123123</view>
+<my-style></my-style> -->
+
+<!-- 3.组件和页面的数据传递 -->
+<!-- （1）页面传递给组件数据：传递给组件的propertities的某个属性即可 -->
+<my-prop title="hahaha"/>
+<my-prop title="hehehe"/>
+<my-prop/>
+
+<!-- （2）传递样式 -->
+<!-- 先在组件中将要设定样式的元素添加一个类名 再通过该组件js文件的externalClass属性（是一个数组）添加该类名，再在使用该组件的页面中对该同名属性进行赋值 再修改样式即可 -->
+<!-- 本质就是延伸了组件中的类名 -->
+<my-prop titleclass="red"/>
+<my-prop titleclass="green"/>
+<my-prop titleclass="blue"/>
+
+<!-- （3）组件内部传递数据给页面 -->
+<!-- 组件内部通过this.triggerEvent将传递自定义事件即可 -->
+<view>当前计数:{{count}}</view>
+<my-event bind:increment="increment"/>
+
+<!-- tab-control演练 -->
+<w-tab-control title="{{['流行','精选','最新']}}" bind:btnClick="btnClick"></w-tab-control>
+<text>{{currentIndex}}</text>
+
+<!-- 直接获取组件对象并修改数据 -->
+<button bindtap="cpnChange">修改组件内数据</button>
+<my-select class="targetCpn"></my-select>
+
+
+<!-- 插槽的使用 -->
+<!-- 1.普通单个插槽的使用 -->
+<my-slot>
+  <text>主体</text>
+  <slider value="60"></slider>
+</my-slot>
+
+<!-- 2.多个插槽的使用（具名插槽):给插槽起名字 2.插槽所在组件对象options中的multipleSlots为true -->
+<my-multi>
+<text slot="slot1">头</text>
+<text slot="slot2">身</text>
+<text slot="slot3">尾</text>
+</my-multi>
+
+<my-cpnobj></my-cpnobj>

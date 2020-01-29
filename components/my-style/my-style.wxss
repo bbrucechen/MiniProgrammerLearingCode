@@ -1,0 +1,17 @@
+/* components/my-style/my-style.wxss */
+.title {
+  font-size: 50rpx;
+  font-weight: 700;
+}
+
+.content {
+  font-size: 70rpx;
+}
+
+/* view {
+  font-style:italic;
+}
+
+#box {
+  background: orange;
+} */

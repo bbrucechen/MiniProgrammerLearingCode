@@ -1,0 +1,7 @@
+<!--components/my-cpn/my-cpn.wxml-->
+<!-- 组件同样由js json wxml wxss 四个文件组成 -->
+<!-- 自定义好组件后要在使用的页面的json文件里注册 -->
+<!-- 自定义组件的json文件里的component项必须为true -->
+<view>{{title}}</view>
+<view>content</view>
+<cpn1/>
