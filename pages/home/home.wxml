@@ -1,3 +1,17 @@
-<!--pages/home/home.wxml-->
-<text class="title">hello world</text>
+<!-- 1.toast弹窗:利用wx对象中的showToast方法 -->
+<!-- 1.toast弹窗 -->
+<button bindtap="toastShow">Toast</button>
+
+<!-- 2.modal弹窗 -->
+<button bindtap="showModal">Toast</button>
+
+<!-- 3。loading弹窗 -->
+<button bindtap="showLoading">Toast</button>
+
+<!-- 4.actionSheet -->
+<button bindtap="showAction">Toast</button>
+
+<!-- 5.分享按钮:直接设置open-type为share -->
+<button open-type="share">分享</button>
+
 
