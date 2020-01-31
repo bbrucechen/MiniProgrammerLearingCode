@@ -1,23 +1,18 @@
-// pages/home/home.js
+// pages/comment/comment.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title:'hahaha'
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
-  },
-  pushPage() {
-    wx.navigateTo({
-      url: '/pages/detail/detail?greet=傻逼',
-    })
+
   },
 
   /**

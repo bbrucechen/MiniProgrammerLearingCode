@@ -1,3 +1,23 @@
-<!--pages/home/home.wxml-->
-<text class="title">hello world</text>
+<!-- 1.通过navigator组件实现页面跳转 -->
+<navigator url="/pages/detail/detail">跳到详情页</navigator>
+<!-- navigator的一些属性 -->
+<!-- （1）open-type：控制页面跳转方式 -->
+<!-- redirect：关掉当前页面再跳转，不允许跳到tabbar -->
+<navigator url="/pages/detail/detail" open-type="redirect">redirect</navigator>
 
+<!-- switchTab:跳转到tabbar的页面 -->
+<navigator url="/pages/about/about" open-type="switchTab">swtichtab</navigator>
+
+<!-- reLaunch:关闭所有页面再跳转 -->
+<navigator url="/pages/detail/detail" open-type="reLaunch">reLaunch</navigator>
+
+<!-- navigateBack:返回上一级页面(只对open-type为默认值跳转过来的页面有效 -->
+<navigator open-type="navigateBack">back</navigator>
+
+<!-- 2.跳转过程传递数据:直接通过url的query字段传递然后在目标页面的onLoad函数的参数直接获取 -->
+<navigator url="/pages/detail/detail?name=why&age=18&height=188">传输局</navigator>
+
+{{title}}
+
+<!-- 3.通过代码跳转 -->
+<button bindtap="pushPage">跳到详情页</button>

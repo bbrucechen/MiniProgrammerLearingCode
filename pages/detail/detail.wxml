@@ -1,0 +1,3 @@
+<navigator open-type="navigateBack">back</navigator>
+<navigator url="/pages/comment/comment">comment</navigator>
+<button bindtap="backPage">返回</button>
