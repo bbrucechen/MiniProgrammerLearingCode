@@ -1,4 +1,5 @@
 // pages/home/home.js
+import requst from '../../network/network.js'
 Page({
 
   /**
@@ -12,55 +13,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 原生发送网络请求：调用wx对象里的request方法
+    // wx.request({
+    //         url:'https://api.asilu.com/cloud-music/163',
+    //         data:{
+    //           type:'play',
+    //           id:507681959
+    //         },
+    //   success:function(res) {
+    //     console.log(res)
+    //   }
+    // })
 
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    // 使用封装的方法发送网络请求
+    requst({
+      url:'https://api.asilu.com/cloud-music/163',
+      data:{
+        type: 'playlist',
+        id: 3148813452
+      }
+    }).then((res) => {
+      console.log(res)
+    })
   }
 })
